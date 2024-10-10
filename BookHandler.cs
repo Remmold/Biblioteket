@@ -22,6 +22,13 @@ public  class BookHandler
 
         };
     }
+
+
+
+    public void DisplayOptions(Book isAdmin)
+    {
+        
+    }
     /// <summary>
     /// Removes a book from a list of books
     /// </summary>
@@ -58,5 +65,17 @@ public  class BookHandler
     public void DisplayBookListInConsole()
     {
         DisplayBookListInConsole(AllBooks);
+    }
+    public void DisplayMenuAdmin()
+    {
+        List<String> optionList = new()
+        {
+            "DisplayBookList"
+        };
+        List<Action> methodList = new()
+        {
+            DisplayBookListInConsole
+        };
+        Util.DisplayMenu(optionList,methodList);
     }
 }
