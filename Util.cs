@@ -33,4 +33,16 @@ public static class Util
             else return stringToValidate;
         }
     }
+
+
+    public static void DisplayMenu(List<String> optionsList,List<Action> methodList)
+    {
+        for(int i = 0; i< optionsList.Count;i++)
+        {
+            int markedIndex = 0;
+            Console.WriteLine($"[{i}{optionsList[i]}]");
+            
+
+        }
+    }
 }
