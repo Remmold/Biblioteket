@@ -8,17 +8,18 @@ public  class BookHandler
     {
         AllBooks = new List<Book>
         {
-            new Book("J.R.R Tolkien","Lord of the rings",Genre.Fantasy),
-            new Book("Harper Lee", "To Kill a Mockingbird", Genre.Fiction),
-            new Book("Patrick Rothfuss", "The Name of the Wind", Genre.Fantasy),
-            new Book("Frank Herbert", "Dune", Genre.ScienceFiction),
-            new Book("Stieg Larsson", "The Girl with the Dragon Tattoo", Genre.Mystery),
-            new Book("Stephen King", "The Shining", Genre.Horror),
-            new Book("Jane Austen", "Pride and Prejudice", Genre.Romance),
-            new Book("Jack London", "The Call of the Wild", Genre.Adventure),
-            new Book("Yuval Noah Harari", "Sapiens: A Brief History of Humankind", Genre.NonFiction),
-            new Book("Markus Zusak", "The Book Thief", Genre.Historical),
-            new Book("Suzanne Collins", "The Hunger Games", Genre.YoungAdult)
+            new Book("Lord of the Rings", "J.R.R Tolkien", Genre.Fantasy),
+            new Book("To Kill a Mockingbird", "Harper Lee", Genre.Fiction),
+            new Book("The Name of the Wind", "Patrick Rothfuss", Genre.Fantasy),
+            new Book("Dune", "Frank Herbert", Genre.ScienceFiction),
+            new Book("The Girl with the Dragon Tattoo", "Stieg Larsson", Genre.Mystery),
+            new Book("The Shining", "Stephen King", Genre.Horror),
+            new Book("Pride and Prejudice", "Jane Austen", Genre.Romance),
+            new Book("The Call of the Wild", "Jack London", Genre.Adventure),
+            new Book("Sapiens: A Brief History of Humankind", "Yuval Noah Harari", Genre.NonFiction),
+            new Book("The Book Thief", "Markus Zusak", Genre.Historical),
+            new Book("The Hunger Games", "Suzanne Collins", Genre.YoungAdult)
+
         };
     }
     /// <summary>
@@ -51,14 +52,11 @@ public  class BookHandler
     {
         foreach(Book b in books)
         {
-            Console.WriteLine($"{b.Title,-20}{b.Author,-20}{b.Genre,-20}");
+            Console.WriteLine($"{b.Title,-45}{b.Author,-45}{b.Genre,-20}");
         }
     }
     public void DisplayBookListInConsole()
     {
-        foreach(Book b in AllBooks)
-        {
-            Console.WriteLine($"{b.Title,-20}{b.Author,-20}{b.Genre,-20}");
-        }
+        DisplayBookListInConsole(AllBooks);
     }
 }

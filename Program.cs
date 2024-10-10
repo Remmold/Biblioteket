@@ -1,12 +1,11 @@
 ﻿public class Program
 {
-    public BookHandler bookHandler = new BookHandler();
+    public static BookHandler bookHandler = new BookHandler();
     public static void Main()
     {
-
-        
-        
-
+    
+    bookHandler.DisplayBookListInConsole();
+    Console.ReadKey();
 
 
     }
